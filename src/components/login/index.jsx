@@ -13,7 +13,7 @@ function Login() {
                     className="w-10 h-10 mt-10"
                     src="https://image.flaticon.com/icons/png/512/25/25231.png" 
                 />
-               <p className="font-bold text-2xl mb-10 mt-5">Sign In to GitChat</p>
+               <p className="font-bold text-2xl mb-10 mt-5">Sign In to DevChat</p>
                <Input 
                     placeholder="Enter Username"
                     type="text"
@@ -34,7 +34,7 @@ function Login() {
                     buttonText="SignIn with GitHub"
                     primary={false}
                />
-               <p className="mt-5 mb-10 font-sans">New to GitChat? <span className="text-blue-500 cursor-pointer">Sign Up Here.</span></p>
+               <p className="mt-5 mb-10 font-sans">New to DevChat? <span className="text-blue-500 cursor-pointer">Sign Up Here.</span></p>
             </div>
         </div>
     );
