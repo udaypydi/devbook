@@ -10,7 +10,7 @@ import './app.scss';
 export default function App() {
   return (
     <div>
-      
+      <p>App</p>
     </div>
   );
 }
