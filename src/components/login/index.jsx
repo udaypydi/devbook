@@ -2,8 +2,19 @@ import React from 'react';
 import Input from 'uielements/input';
 import Button from 'uielements/button';
 import { LOGIN_BUTTON, GITHUB_BUTTON } from './login.styles';
+import { githubAuth } from './login.api';
 
 function Login() {
+
+    function authenticateGithub() {
+        githubAuth()
+        .then(json => {
+            console.log(json);
+        }).catch(err => {
+            console.error(err);
+        });
+    }
+
     return (
         <div className="w-screen h-screen bg-gray-700 flex justify-center items-center p-16">
             <div 
@@ -33,6 +44,7 @@ function Login() {
                     className={GITHUB_BUTTON}
                     buttonText="SignIn with GitHub"
                     primary={false}
+                    onClick={authenticateGithub}
                />
                <p className="mt-5 mb-10 font-sans">New to DevChat? <span className="text-blue-500 cursor-pointer">Sign Up Here.</span></p>
             </div>
