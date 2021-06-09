@@ -7,12 +7,7 @@ import { githubAuth } from './login.api';
 function Login() {
 
     function authenticateGithub() {
-        githubAuth()
-        .then(json => {
-            console.log(json);
-        }).catch(err => {
-            console.error(err);
-        });
+        window.open('http://localhost:3000/auth/github', '_blank');
     }
 
     return (
