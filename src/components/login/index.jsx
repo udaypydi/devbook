@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Input from 'uielements/input';
 import Button from 'uielements/button';
 import { LOGIN_BUTTON, GITHUB_BUTTON } from './login.styles';
-import { githubAuth } from './login.api';
+import { githubAuth, getUser } from './login.api';
 
 function Login() {
+
+    useEffect(() => {
+        getUser()
+            .then(json => {
+                console.log(json);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }, []);
 
     function authenticateGithub() {
         window.open('http://localhost:3000/auth/github', '_blank');
